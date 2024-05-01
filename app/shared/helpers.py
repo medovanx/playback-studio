@@ -9,10 +9,10 @@ def process_frame(frame):
     return pixmap
     
 def convert_time_to_milliseconds(time_str):
-    """Convert time from 'minutes:seconds' format to milliseconds."""
+    """Convert time from 'HH:MM:SS' format to milliseconds."""
     if ':' in time_str:
-        minutes, seconds = map(int, time_str.split(':'))
-        total_seconds = (minutes * 60) + seconds
+        hours, minutes, seconds = map(int, time_str.split(':'))
+        total_seconds = (hours * 3600) + (minutes * 60) + seconds
         milliseconds = total_seconds * 1000
         return milliseconds
     else:
