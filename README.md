@@ -1,6 +1,6 @@
 <div align="center">
   
-#  Download Time Calculator
+#  Playback Studio
 
 [![PyPI version](https://img.shields.io/pypi/pyversions/spotDL?color=%2344CC11&style=flat-square)](https://www.python.org/)
 
