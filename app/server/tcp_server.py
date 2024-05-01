@@ -29,7 +29,7 @@ class ClientSession:
         self.capture = cv2.VideoCapture(self.video_path)
         while True:
             with self.lock:  # Acquire lock before accessing the capture object
-                if not self.is_playing:
+                if not self.is_playing: # Check if playback is paused, then wait for a command
                     command = self.command_queue.get()
                     if command == "stop":
                         break
@@ -78,7 +78,11 @@ class ClientSession:
     def seek_video(self, position):
         with self.lock:  # Use the lock to ensure thread-safe access
             if self.capture:
-                self.capture.set(cv2.CAP_PROP_POS_MSEC, position)
+                total_duration = self.capture.get(cv2.CAP_PROP_POS_MSEC)
+                if position >= 0 and position <= total_duration:
+                    self.capture.set(cv2.CAP_PROP_POS_MSEC, position)
+                else:
+                    logging.warning("Invalid seek position")
 
 class TCPServer:
     def __init__(self, ip, port):
