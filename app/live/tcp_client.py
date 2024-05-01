@@ -28,8 +28,8 @@ class TCPClient(QObject):
             while True:
                 # Receive the size of the frame first
                 frame_size_data = self.socket.recv(4)
-                if len(frame_size_data) < 4:
-                    break
+                if len(frame_size_data) < 4:    # If no data is received, then continue
+                    continue 
                 frame_size = struct.unpack(">L", frame_size_data)[0]
                 frame_data = b""
 
