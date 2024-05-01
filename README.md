@@ -12,6 +12,7 @@ run ``server_main.py`` to start the tcp server.
 
 run ``pbs_main.py`` to start the client window.
 
+only for testing on localhost.
 # GUI
 <p align="center">
   <img src="https://github.com/medovanx/download-time-calculator/assets/29468096/77fb4075-8d85-43ec-a224-aa6e3ac1684b" width="49%">
