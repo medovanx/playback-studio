@@ -1,11 +1,11 @@
 import os
 
-from PyQt5.QtCore import pyqtSignal, QThread, pyqtSlot
+from PyQt5.QtCore import pyqtSignal, QThread, pyqtSlot, Qt
 from PyQt5.QtWidgets import QWidget, QFileDialog
 from PyQt5.QtMultimedia import QMediaPlayer
 from PyQt5.QtGui import QPixmap
-from PyQt5 import uic
-from PyQt5.QtCore import Qt
+from PyQt5 import uic, QtGui
+
 import numpy as np
 
 from recording.webcam_capture import WebcamCapture
@@ -24,6 +24,9 @@ class PlaybackStudio(QWidget, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        icon_path = os.path.join(os.path.abspath("."), "app", "assets", "icon.png")
+        self.setWindowIcon(QtGui.QIcon(icon_path))
+        self.setFixedSize(self.size())
 
         self._init_webcam()
         self._init_video_player()
