@@ -106,10 +106,3 @@ class TCPServer:
     def close_server(self):
         self.server_socket.close()
         self.logger.info("Server shutdown successfully.")
-
-# Usage
-server = TCPServer("localhost", 5000)
-try:
-    server.accept_connections()
-except KeyboardInterrupt:
-    server.close_server()
