@@ -1,6 +1,8 @@
 <div align="center">
-  
+<img src="https://github.com/medovanx/playback-studio/assets/29468096/82db2a8e-4d77-4116-af3a-6320de7b35e7" height="200px">
+
 #  Playback Studio
+
 
 [![PyPI version](https://img.shields.io/pypi/pyversions/spotDL?color=%2344CC11&style=flat-square)](https://www.python.org/)
 
