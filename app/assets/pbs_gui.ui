@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>552</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Playback Studio</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>501</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>531</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab_1">
+    <attribute name="title">
+     <string>Webcam</string>
+    </attribute>
+    <widget class="QLabel" name="webcam_preview">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>501</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start_webcapture_btn">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>381</y>
+       <width>511</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+     </property>
+     <property name="text">
+      <string>Start Capture</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="stop_webcapture_btn">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>511</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+     </property>
+     <property name="text">
+      <string>Stop Capturing</string>
+     </property>
+    </widget>
+    <zorder>webcam_preview</zorder>
+    <zorder>stop_webcapture_btn</zorder>
+    <zorder>start_webcapture_btn</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Video Player</string>
+    </attribute>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>501</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="browse_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="play_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QVideoWidget" name="video_playback_display" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>521</width>
+       <height>371</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Stream</string>
+    </attribute>
+    <widget class="QLabel" name="live_preview">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>521</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>350</y>
+       <width>501</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLineEdit" name="host_input">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;QLineEdit {&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Background color when the widget is enabled */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;background-color&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;#f0f0f0&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Border style: solid, border width, border color */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;border&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;2px&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt; solid &lt;/span&gt;#c0c0c0&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Rounded corners */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;border-radius&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;5px&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Padding around the text */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;padding&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;5px&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Text color */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;color&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;#333&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #f0f0f0;
+    border: 2px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border-color: green;
+}</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string>localhost</string>
+        </property>
+        <property name="placeholderText">
+         <string>0.0.0.0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="connect_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Connect</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="play_live_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Play</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pause_live_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Pause</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="rewind_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Rewind</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="seek_btn">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+			color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #41cd52;
+            border-radius:8px;
+}
+
+QPushButton:hover{
+background: #7ADC85
+
+;}</string>
+        </property>
+        <property name="text">
+         <string>Seek</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="seek_input">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;QLineEdit {&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Background color when the widget is enabled */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;background-color&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;#f0f0f0&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Border style: solid, border width, border color */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;border&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;2px&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt; solid &lt;/span&gt;#c0c0c0&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Rounded corners */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;border-radius&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;5px&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Padding around the text */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;padding&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;5px&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;/* Text color */&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;/&gt;color&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;: &lt;/span&gt;#333&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Söhne Mono','Monaco','Andale Mono','Ubuntu Mono','monospace'; font-size:14px; color:#ffffff; background-color:#0d0d0d;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #f0f0f0;
+    border: 2px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border-color: green;
+}</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>MM:HH</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header>PyQt5.QtMultimediaWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
