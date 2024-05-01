@@ -9,6 +9,7 @@ A simple video player, webcam recorder and tcp client/server for streaming.
 
 # Notes
 run ``server_main.py`` to start the tcp server.
+
 run ``pbs_main.py`` to start the client window.
 
 # GUI
