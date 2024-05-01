@@ -448,7 +448,7 @@ QLineEdit:focus {
          <string/>
         </property>
         <property name="placeholderText">
-         <string>MM:HH</string>
+         <string>HH:MM:SS</string>
         </property>
        </widget>
       </item>
